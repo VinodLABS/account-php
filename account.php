@@ -85,7 +85,6 @@ final class ParentClass {
         echo "You should not see this";
     }
 }
-
 class ChildClass extends ParentClass {
     final public function greet() {
         parent::greetss();
