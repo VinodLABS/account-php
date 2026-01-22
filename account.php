@@ -76,20 +76,48 @@
 
 
 
-final class ParentClass {
-    public function greetss() {
-        echo "Hello Parent";
-    }
+
+// abstract class ParentClass {
+//     const GREETING = "Hello Parent";
     
-    protected function secretMessage() {
-        echo "You should not see this";
+//     final public function greetss() {
+//         echo self::GREETING;
+//     }
+    
+//     protected function secretMessage() {
+//         echo "You should not see this";
+//     }
+    
+//     abstract public function abstractMethod();
+// }
+// class ChildClass extends ParentClass {
+//     const GREETING = "Hello Child";
+    
+//     final public function greet() {
+//         parent::greetss();
+//         parent::secretMessage();
+//         echo " & " . self::GREETING;
+//     }
+    
+//     public function abstractMethod() {
+//         echo " - Abstract method implemented";
+//     }
+// }
+
+// $obj = new ChildClass();
+// $obj->greet();
+// $obj->abstractMethod();
+
+
+class ParentClass {
+    public function greet() {
+        echo "Hello from Parent";
     }
 }
+
 class ChildClass extends ParentClass {
-    final public function greet() {
-        parent::greetss();
-        parent::secretMessage();
-        echo " & Hello Child";
+    public function greet() {
+        echo "Hello from Child";
     }
 }
 
