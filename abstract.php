@@ -4,20 +4,20 @@ abstract class car {
 
     public function __construct($name)
     {
-        $this->name =- $name;
+        $this->name = $name;
 
     } 
     abstract public function intro();
-
 }
 
 class Audi extends car {
+
 public function intro(){
-    echo "meowe";
+   return "hii i am abstracted from parent class my name is " . $this->name;
 }
 
 }
 
-$audi = new audi("Audi");
+$audi = new Audi("audi");
  echo $audi->intro();
 ?>
